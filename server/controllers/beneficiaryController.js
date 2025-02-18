@@ -197,10 +197,8 @@ const updateBeneficiaryInDatabase = async (accountID, beneficiaryID) => {
 
 const addBalanceToBeneficiary = async (beneficiaryID, amount = 100) => {
   if (!beneficiaryID) {
-    return { success: false, message: 'No beneficiary ID provided.' }; // Handle missing beneficiary
+    return { success: false, message: 'No beneficiary ID provided.' }; 
   }
-
-  console.log({ beneficiaryID });
 
   try {
     await client.query('BEGIN');

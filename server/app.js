@@ -1,10 +1,13 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const beneficiaryRoutes = require('./routes/beneficiaryRoutes');
 const createTables = require('./db/db_operations/createTable');
 
 const app = express();
+
+app.use(cors())
 
 // Middleware
 app.use(bodyParser.json());
