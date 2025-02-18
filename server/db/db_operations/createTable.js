@@ -11,13 +11,10 @@ const createCombinedTable = async () => {
 
   try {
     await client.query(createCombinedTableQuery);
-    console.log("Combined table created or already exists.");
+    console.log('Combined table created or already exists.');
   } catch (error) {
-    console.error("Error creating combined table:", error);
-    throw error; 
+    console.error('Error creating combined table:', error);
+    throw error;
   }
 };
-module.exports = createCombinedTable
-
-
-//     // balance DECIMAL(10, 2) DEFAULT 0
+module.exports = createCombinedTable;
